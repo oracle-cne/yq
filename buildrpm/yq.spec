@@ -10,7 +10,8 @@
 %define name yq
 %define version {{{$version}}}
 %define release 1
-%global golang_version      1.13.15
+%global golang_version 1.16
+%global _buildhost build-ol%{?oraclelinux}-%{?_arch}.oracle.com
 
 Name:                   %{name}
 Version:                %{version}
