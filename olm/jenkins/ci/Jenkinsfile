@@ -4,7 +4,7 @@ import com.oracle.olcne.pipeline.BranchPattern
 String version = "3.4.1";
 
 olcnePipeline(
-        branchPattern: new BranchPattern(master: "oracle/release/" + version, feature: "feature/.*"),
+        branchPattern: new BranchPattern(master: "oracle/release/" + version, feature: '(?!^release/.*$)(^.*$)'),
         customStages: [container: [enabled: false], merge: [enabled: true]],
         platforms: ['ol7', 'ol8'],
         yumOL7Repos: ['ol7_optional_latest', 'ol7_addons', 'ol7_developer_golang113'],
