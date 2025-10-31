@@ -8,5 +8,6 @@ olcnePipeline(
         customStages: [container: [enabled: false]],
         platforms: ['ol8', 'ol9'],
         yumOL8Repos:['ol8_appstream', 'ol8_codeready_builder'],
-        yumOL9Repos:['ol9_appstream', 'ol9_codeready_builder']
+        yumOL9Repos:['ol9_appstream', 'ol9_codeready_builder'],
+        architectures: ['x86_64', 'aarch64'],
 )
