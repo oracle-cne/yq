@@ -39,7 +39,7 @@ GOPATH_SRC=$GOPATH/src/%{package_name}
 
 pushd $GOPATH_SRC
 git_short_ver=`curl -sS https://api.github.com/repos/mikefarah/yq/git/refs/tags/v%{version} | jq -r '.object.sha' | colrm 8`
-LDFLAGS="-X main.GitCommit=${git_short_ver} -X main.GitDescribe=%{version} -X main.VERSION=v%{version}"
+LDFLAGS="-X main.GitCommit=${git_short_ver} -X main.GitDescribe=%{version} -X main.version=v%{version}"
 go build -trimpath=false -v -o %{name} --ldflags "${LDFLAGS}"
 popd
 
