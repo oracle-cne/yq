@@ -9,7 +9,7 @@
 
 %define name yq
 %define version 4.54.1
-%define release 1
+%define release 2
 %global golang_version 1.20.12
 %global _buildhost build-ol%{?oraclelinux}-%{?_arch}.oracle.com
 
@@ -55,5 +55,8 @@ rm -fr %{buildroot}
 rm -fr %{_builddir}/%{name}-%{version}
 
 %changelog
+* Wed Oct 28 2026 Oracle Cloud Native Environment Authors <noreply@oracle.com> - 4.54.1-2
+- Add Oracle Linux 10 support
+
 * Tue Sep 29 2026 Oracle Cloud Native Environment Authors <noreply@oracle.com> - 4.54.1-1
 - Added Oracle specific build files
